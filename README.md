@@ -1,0 +1,1 @@
+# docker-debezium-logstash
