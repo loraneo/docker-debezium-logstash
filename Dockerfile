@@ -5,7 +5,7 @@ WORKDIR /opt
 ENV LOGSTASH_HOME /opt/logstash
 
 RUN cd /tmp &&\
-	wget -L https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz &&\
+	curl -k -o logstash-5.6.3.tar.gz -L https://artifacts.elastic.co/downloads/logstash/logstash-5.6.3.tar.gz &&\
 	tar -xvf logstash-5.6.3.tar.gz &&\
 	mv logstash-5.6.3 /opt && \
 	ln -s /opt/logstash-5.6.3 $LOGSTASH_HOME
